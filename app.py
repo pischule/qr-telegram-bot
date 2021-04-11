@@ -1,3 +1,4 @@
+import os
 import urllib
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
@@ -16,7 +17,7 @@ def qr(update, context):
 
 
 def main():
-    TOKEN = open('token.txt').read().strip()
+    TOKEN = os.getenv('TOKEN')
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(Filters.text, qr))

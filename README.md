@@ -5,23 +5,23 @@ My first messenger bot. It turns any text into qr code.
 
 Install all requirements
 
-```bash
-pip -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
 ## Usage
 
-Put your token into 'token.txt'
+Clone the repo
 
 ```bash
-echo 'YOUR TOKEN' > token.txt
+git clone https://github.com/pischule/qr-telegram-bot.git
+cd qr-telegram-bot
 ```
 
-Run main.py
+Put your token into '.env'
 
 ```bash
-source venv/bin/activate
-python main.py
+echo 'TOKEN=???????' > .env
+```
+
+Run the app!
+
+```bash
+docker-compose up -d
 ```
